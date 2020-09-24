@@ -1,22 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "@reach/router";
 
 // Content
 import { menuItems } from "./content";
 
-// Styles
-const Header = styled(Link)``;
+// Components
+import MenuItem from "../../primitives/menu-item"
 
-const MenuItem = styled(Link)``;
+const Wrapper = styled.nav`
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+`;
 
-const SideNavigation = () => (
-  <Wrapper>
-    <Header>MVDM Fotografie</Header>
-    {menuItems.map((item) => (
-      <MenuItem to={item.path}>{item.name}</MenuItem>
-    ))}
-  </Wrapper>
-);
+const SideNavigation = ({ isActive }) => {
+  return (
+    <Wrapper>
+      {menuItems.map((item, i) => (
+        <MenuItem key={i} to={item.path} active={isActive(item.path)}>
+          {item.name}
+        </MenuItem>
+      ))}
+    </Wrapper>
+  );
+};
 
 export default SideNavigation;

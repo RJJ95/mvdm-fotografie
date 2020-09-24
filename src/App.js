@@ -1,5 +1,5 @@
 import React from "react";
-import { Router } from "@reach/router";
+import { Location, Router } from "@reach/router";
 
 // Components
 import Layout from "./components/constructs/layout";
@@ -7,12 +7,19 @@ import Layout from "./components/constructs/layout";
 // Pages
 import Home from "./pages/home";
 
+// Config
+import { PATHNAMES } from "./config/pathnames";
+
 const App = () => (
-  <Layout>
-    <Router>
-      <Home path="/" />
-    </Router>
-  </Layout>
+  <Location>
+    {({ location }) => (
+      <Layout location={location}>
+        <Router>
+          <Home path={PATHNAMES.HOME} />
+        </Router>
+      </Layout>
+    )}
+  </Location>
 );
 
 export default App;
