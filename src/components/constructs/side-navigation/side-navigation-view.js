@@ -11,6 +11,7 @@ const Wrapper = styled.nav`
   display: flex;
   flex-direction: column;
   width: fit-content;
+  margin-right: 75px;
 `;
 
 const SideNavigation = ({ isActive }) => {

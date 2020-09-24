@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 50px;
+  margin-bottom: 50px;
 `;
 
 const Header = styled(MenuItem)`
@@ -21,7 +22,10 @@ const Header = styled(MenuItem)`
   margin-top: 50px;
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
 
 const Layout = ({ children, location }) => {
   function isActive(path) {
