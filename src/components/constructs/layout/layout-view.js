@@ -7,13 +7,14 @@ import { PATHNAMES } from "../../../config/pathnames";
 // Components
 import SideNavigation from "../side-navigation";
 import MenuItem from "../../primitives/menu-item";
+import Footer from "../../constructs/footer";
 
 // Styles
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 `;
 
 const Header = styled(MenuItem)`
@@ -42,6 +43,7 @@ const Layout = ({ children, location }) => {
         <SideNavigation isActive={isActive} />
         {children}
       </Container>
+      <Footer />
     </Wrapper>
   );
 };

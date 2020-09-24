@@ -26,7 +26,7 @@ export const menuItems = [
     path: PATHNAMES.ZWART_WIT,
   },
   {
-    name: "Begrafenis",
+    name: "Uitvaart",
     path: PATHNAMES.BEGRAFENIS,
   },
   {

@@ -6,6 +6,6 @@ export const PATHNAMES = {
   NATUUR: "/natuur",
   STILLEVENS: "/stillevens",
   ZWART_WIT: "/zwart-wit",
-  BEGRAFENIS: "/begrafenis",
+  BEGRAFENIS: "/uitvaart",
   CONTACT: "/contact",
 };
