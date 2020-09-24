@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Gallery from "react-photo-gallery";
+import ZoomedImage from "../../components/constructs/zoomed-image";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -28,13 +28,13 @@ const Wrapper = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
+  margin-right: 5px;
 `;
 
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const Overlay = styled.div`
@@ -55,14 +55,25 @@ const Overlay = styled.div`
 `;
 
 const Portfolio = ({ path }) => {
+  const [zoomedImage, setZoomedImage] = useState(null);
   return (
     <Wrapper>
+      {zoomedImage && (
+        <ZoomedImage
+          image={zoomedImage}
+          cancelZoom={() => setZoomedImage(null)}
+        />
+      )}
       {sportPhotos.map((photos) => (
         <Column>
           {photos.map((photo) => (
             <ImageContainer>
-              <Image effect="blur" src={photo} />
-              <Overlay />
+              <Image
+                effect="blur"
+                src={photo}
+                onClick={() => setZoomedImage(photo)}
+              />
+              <Overlay onClick={() => setZoomedImage(photo)} />
             </ImageContainer>
           ))}
         </Column>
