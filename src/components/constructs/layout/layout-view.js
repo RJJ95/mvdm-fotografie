@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const Layout = ({children}) => {
-    return ( 
-        <h1>layout</h1>
-     );
-}
- 
+// Components
+import SideNavigation from "../side-navigation";
+
+const Layout = ({ children }) => (
+  <Wrapper>
+    <SideNavigation />
+    {children}
+  </Wrapper>
+);
+
 export default Layout;

@@ -1,13 +1,18 @@
 import React from "react";
 import { Router } from "@reach/router";
 
+// Components
+import Layout from "./components/constructs/layout";
+
 // Pages
 import Home from "./pages/home";
 
 const App = () => (
-  <Router>
-    <Home path="/" />
-  </Router>
+  <Layout>
+    <Router>
+      <Home path="/" />
+    </Router>
+  </Layout>
 );
 
 export default App;
