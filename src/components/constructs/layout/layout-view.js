@@ -6,7 +6,7 @@ import { PATHNAMES } from "../../../config/pathnames";
 
 // Components
 import SideNavigation from "../side-navigation";
-import MenuItem from "../../primitives/menu-item"
+import MenuItem from "../../primitives/menu-item";
 
 // Styles
 const Wrapper = styled.div`
@@ -20,11 +20,12 @@ const Header = styled(MenuItem)`
   font-size: 54px;
   margin-bottom: 50px;
   margin-top: 50px;
+  width: fit-content;
 `;
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 `;
 
 const Layout = ({ children, location }) => {
