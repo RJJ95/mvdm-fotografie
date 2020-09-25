@@ -11,19 +11,23 @@ import Contact from "./pages/contact";
 
 // Config
 import { PATHNAMES } from "./config/pathnames";
+import GlobalStyle from "./config/global-styles";
 
 const App = () => (
-  <Location>
-    {({ location }) => (
-      <Layout location={location}>
-        <Router>
-          <Home path={PATHNAMES.HOME} />
-          <Portfolio path={PATHNAMES.CONCERT} />
-          <Contact path={PATHNAMES.CONTACT} />
-        </Router>
-      </Layout>
-    )}
-  </Location>
+  <>
+    <GlobalStyle />
+    <Location>
+      {({ location }) => (
+        <Layout location={location}>
+          <Router>
+            <Home path={PATHNAMES.HOME} />
+            <Portfolio path={PATHNAMES.CONCERT} />
+            <Contact path={PATHNAMES.CONTACT} />
+          </Router>
+        </Layout>
+      )}
+    </Location>
+  </>
 );
 
 export default App;

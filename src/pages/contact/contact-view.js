@@ -27,8 +27,8 @@ const Contact = () => (
     <Column>
       <Paragraph>
         Indien u met mij wilt samenwerken, kan ik u verzekeren dat ik altijd
-        goed voorbereid.U kunt er van op aan dat u de fot een afzienbare termijn
-        ontvangt.Deze website is ee e van mijn werk, maar ik sta open voor
+        goed voorbereid. U kunt er van op aan dat u de fot een afzienbare termijn
+        ontvangt. Deze website is een impressie van mijn werk, maar ik sta open voor
         andere thema’s of vragen over fotografie.
       </Paragraph>
       <Paragraph>
