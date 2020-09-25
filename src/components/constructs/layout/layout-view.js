@@ -37,6 +37,10 @@ const HeaderContainer = styled.div`
   margin-top: 50px;
 `;
 
+const ChildrenWrapper = styled.div`
+  width: 1010px;
+`;
+
 const Layout = ({ children, location }) => {
   function isActive(path) {
     return location.pathname === path ? "true" : "false";
@@ -52,7 +56,7 @@ const Layout = ({ children, location }) => {
         </HeaderContainer>
         <Container>
           <SideNavigation isActive={isActive} />
-          {children}
+          <ChildrenWrapper>{children}</ChildrenWrapper>
         </Container>
         <Footer />
       </LayoutContainer>

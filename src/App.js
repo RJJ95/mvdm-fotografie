@@ -7,6 +7,7 @@ import Layout from "./components/constructs/layout";
 // Pages
 import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
+import Contact from "./pages/contact";
 
 // Config
 import { PATHNAMES } from "./config/pathnames";
@@ -18,6 +19,7 @@ const App = () => (
         <Router>
           <Home path={PATHNAMES.HOME} />
           <Portfolio path={PATHNAMES.CONCERT} />
+          <Contact path={PATHNAMES.CONTACT} />
         </Router>
       </Layout>
     )}
