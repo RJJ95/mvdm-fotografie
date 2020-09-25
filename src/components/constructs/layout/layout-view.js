@@ -15,18 +15,26 @@ const Wrapper = styled.div`
   flex-direction: column;
   margin-left: 50px;
   margin-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Header = styled(MenuItem)`
   font-size: 54px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  width: fit-content;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+const LayoutContainer = styled.div``;
+
+const HeaderContainer = styled.div`
+  margin-bottom: 50px;
+  margin-top: 50px;
 `;
 
 const Layout = ({ children, location }) => {
@@ -36,14 +44,18 @@ const Layout = ({ children, location }) => {
 
   return (
     <Wrapper>
-      <Header active={isActive(PATHNAMES.HOME)} to={PATHNAMES.HOME}>
-        MVDM Fotografie
-      </Header>
-      <Container>
-        <SideNavigation isActive={isActive} />
-        {children}
-      </Container>
-      <Footer />
+      <LayoutContainer>
+        <HeaderContainer>
+          <Header active={isActive(PATHNAMES.HOME)} to={PATHNAMES.HOME}>
+            MVDM Fotografie
+          </Header>
+        </HeaderContainer>
+        <Container>
+          <SideNavigation isActive={isActive} />
+          {children}
+        </Container>
+        <Footer />
+      </LayoutContainer>
     </Wrapper>
   );
 };
