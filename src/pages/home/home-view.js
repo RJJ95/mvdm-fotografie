@@ -1,42 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 // Assets
 import heroImage from "../../assets/images/hero-image.jpg";
 
+// Components
+import Column from "../../components/primitives/column";
+
 // Styles
-const HeroImage = styled(LazyLoadImage)`
-  max-width: 1000px;
-  height: auto;
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 10px 20px;
-  justify-content: space-between;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 1000px;
-`;
-
-const Paragraph = styled.p`
-  max-width: 450px;
-`;
+import { Wrapper, HeroImage, Paragraph, ParagraphRow } from "./home-styles";
 
 const Home = () => (
   <Wrapper>
     <HeroImage alt="hero-image" src={heroImage} effect="blur" />
-    <Row>
+    <ParagraphRow>
       <Column>
         <Paragraph>
           Zes jaar geleden ging ik met mijn zwager op vakantie naar Alaska, met
@@ -71,7 +47,7 @@ const Home = () => (
           te nemen op mijn website.
         </Paragraph>
       </Column>
-    </Row>
+    </ParagraphRow>
   </Wrapper>
 );
 
