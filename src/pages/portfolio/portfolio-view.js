@@ -54,10 +54,10 @@ const Portfolio = ({ category }) => {
           cancelZoom={() => setZoomedImage(null)}
         />
       )}
-      {getContentArray().map((photos) => (
-        <ImageColumn>
-          {photos.map((photo) => (
-            <ImageContainer>
+      {getContentArray().map((photos, i) => (
+        <ImageColumn key={i}>
+          {photos.map((photo, i) => (
+            <ImageContainer key={i}>
               <PortfolioImage
                 effect="blur"
                 src={photo}

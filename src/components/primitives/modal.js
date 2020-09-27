@@ -18,8 +18,6 @@ const style = {
     position: "absolute",
     bottom: "0px",
     border: "none",
-    overflow: "scroll",
-    WebkitOverflowScrolling: "touch",
     margin: "auto",
     boxshadow: "0 4px 8px -2px rgba(48,49,51,0.12)",
     background: "none",

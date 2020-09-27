@@ -35,12 +35,24 @@ const FooterContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 50px 20px 10px 20px;
+  padding-top: 50px;
+  padding-bottom: 10px;
 `;
 
 const Layout = ({ children, location }) => {
   function isActive(path) {
     return location.pathname === path ? "true" : "false";
+  }
+
+  function getNotification() {
+    switch (location.pathname) {
+      case PATHNAMES.CONCERT:
+        return "FOTO’S VERKRIJGBAAR OP ACRYLGLAS (60x40). PRIJS OP AANVRAAG";
+      case PATHNAMES.UITVAART:
+        return "OMWILLE VAN PRIVACY WORDEN ER WEINIG FOTO'S VAN DE CATEGORIE 'UITVAART' GETOOND";
+      default:
+        return "";
+    }
   }
 
   return (
@@ -51,7 +63,7 @@ const Layout = ({ children, location }) => {
         </Header>
       </HeaderContainer>
       <BodyContainer>
-        <SideNavigation isActive={isActive} />
+        <SideNavigation notification={getNotification()} isActive={isActive} />
         {children}
       </BodyContainer>
       <FooterContainer>

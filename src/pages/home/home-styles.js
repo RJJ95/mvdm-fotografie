@@ -5,7 +5,7 @@ import Row from "../../components/primitives/row";
 import Column from "../../components/primitives/column";
 
 export const HeroImage = styled(LazyLoadImage)`
-  max-width: 1000px;
+  max-width: 100%;
   height: auto;
 `;
 
