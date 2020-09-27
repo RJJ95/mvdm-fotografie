@@ -8,37 +8,35 @@ import { PATHNAMES } from "../../../config/pathnames";
 import SideNavigation from "../side-navigation";
 import MenuItem from "../../primitives/menu-item";
 import Footer from "../../constructs/footer";
+import Row from "../../primitives/row";
 
 // Styles
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
-  margin-bottom: 20px;
   width: 90%;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Header = styled(MenuItem)`
   font-size: 54px;
 `;
 
-const Container = styled.div`
+const HeaderContainer = styled.div`
+  padding: 50px 0;
+`;
+
+const BodyContainer = styled.div`
   display: flex;
   flex-direction: row;
 `;
 
-const LayoutContainer = styled.div``;
-
-const HeaderContainer = styled.div`
-  margin-bottom: 50px;
-  margin-top: 50px;
-`;
-
-const ChildrenWrapper = styled.div`
-  width: 1010px;
+const FooterContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px 10px 20px;
 `;
 
 const Layout = ({ children, location }) => {
@@ -48,18 +46,18 @@ const Layout = ({ children, location }) => {
 
   return (
     <Wrapper>
-      <LayoutContainer>
-        <HeaderContainer>
-          <Header active={isActive(PATHNAMES.HOME)} to={PATHNAMES.HOME}>
-            MVDM Fotografie
-          </Header>
-        </HeaderContainer>
-        <Container>
-          <SideNavigation isActive={isActive} />
-          <ChildrenWrapper>{children}</ChildrenWrapper>
-        </Container>
+      <HeaderContainer>
+        <Header active={isActive(PATHNAMES.HOME)} to={PATHNAMES.HOME}>
+          MVDM Fotografie
+        </Header>
+      </HeaderContainer>
+      <BodyContainer>
+        <SideNavigation isActive={isActive} />
+        {children}
+      </BodyContainer>
+      <FooterContainer>
         <Footer />
-      </LayoutContainer>
+      </FooterContainer>
     </Wrapper>
   );
 };

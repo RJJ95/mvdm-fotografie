@@ -8,10 +8,12 @@ import { menuItems } from "./content";
 import MenuItem from "../../primitives/menu-item"
 
 const Wrapper = styled.nav`
+  flex-basis: 15%;
+  flex-shrink: 0;
+  flex-grow: 0;
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  margin-right: 75px;
+  padding-right: 20px;
 `;
 
 const SideNavigation = ({ isActive }) => {

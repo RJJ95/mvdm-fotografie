@@ -15,18 +15,15 @@ export const PortfolioImage = styled(Image)`
   }
 `;
 
-export const Wrapper = styled(Row)`
-  max-width: 1010px;
-`;
-
 export const ImageColumn = styled(Column)`
-  margin-right: 5px;
+  flex-shrink: 1;
+  flex-grow: 0;
 `;
 
 export const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  margin-bottom: 5px;
+  padding: 1px;
 `;
 
 export const Overlay = styled.div`
@@ -44,4 +41,11 @@ export const Overlay = styled.div`
     opacity: 0.6;
     background-color: rgba(0, 0, 0, 0.6);
   }
+`;
+
+export const Wrapper = styled(Row)`
+  flex-basis: 60%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  justify-content: space-between;
 `;

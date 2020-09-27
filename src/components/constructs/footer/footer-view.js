@@ -6,8 +6,6 @@ const FooterText = styled.p`
   color: grey;
   font-weight: 600;
   text-align: center;
-  margin-right: 50px;
-  margin-top: 60px;
 `;
 
 const Link = styled.a`
