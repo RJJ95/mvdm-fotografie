@@ -4,8 +4,8 @@ export const PATHNAMES = {
   SPORT: "/sport",
   PORTRET: "/portret",
   NATUUR: "/natuur",
-  STILLEVENS: "/stillevens",
-  ZWART_WIT: "/zwart-wit",
-  BEGRAFENIS: "/uitvaart",
+  STILLEVEN: "/stilleven",
+  ZWARTWIT: "/zwart-wit",
+  UITVAART: "/uitvaart",
   CONTACT: "/contact",
 };

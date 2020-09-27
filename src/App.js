@@ -21,7 +21,13 @@ const App = () => (
         <Layout location={location}>
           <Router>
             <Home path={PATHNAMES.HOME} />
-            <Portfolio path={PATHNAMES.CONCERT} />
+            <Portfolio path={PATHNAMES.CONCERT} category="concert" />
+            <Portfolio path={PATHNAMES.NATUUR} category="natuur" />
+            <Portfolio path={PATHNAMES.PORTRET} category="portret" />
+            <Portfolio path={PATHNAMES.SPORT} category="sport" />
+            <Portfolio path={PATHNAMES.STILLEVEN} category="stilleven" />
+            <Portfolio path={PATHNAMES.UITVAART} category="uitvaart" />
+            <Portfolio path={PATHNAMES.ZWARTWIT} category="zwartwit" />
             <Contact path={PATHNAMES.CONTACT} />
           </Router>
         </Layout>

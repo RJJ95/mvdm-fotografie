@@ -2,30 +2,59 @@ import React, { useState } from "react";
 
 // Components
 import ZoomedImage from "../../components/constructs/zoomed-image";
+import Row from "../../components/primitives/row";
 
-// Content
-import { sportPhotos } from "./content";
+import {
+  concert,
+  natuur,
+  portret,
+  sport,
+  stilleven,
+  uitvaart,
+  zwartwit,
+} from "./content";
 
 // Styles
 import {
-  Wrapper,
   ImageColumn,
   ImageContainer,
   PortfolioImage,
   Overlay,
 } from "./portfolio-styles";
 
-const Portfolio = ({ path }) => {
+const Portfolio = ({ category }) => {
   const [zoomedImage, setZoomedImage] = useState(null);
+
+  function getContentArray() {
+    switch (category) {
+      case "concert":
+        return concert;
+      case "natuur":
+        return natuur;
+      case "portret":
+        return portret;
+      case "sport":
+        return sport;
+      case "stilleven":
+        return stilleven;
+      case "uitvaart":
+        return uitvaart;
+      case "zwartwit":
+        return zwartwit;
+      default:
+        return concert;
+    }
+  }
+
   return (
-    <Wrapper>
+    <Row>
       {zoomedImage && (
         <ZoomedImage
           image={zoomedImage}
           cancelZoom={() => setZoomedImage(null)}
         />
       )}
-      {sportPhotos.map((photos) => (
+      {getContentArray().map((photos) => (
         <ImageColumn>
           {photos.map((photo) => (
             <ImageContainer>
@@ -39,7 +68,7 @@ const Portfolio = ({ path }) => {
           ))}
         </ImageColumn>
       ))}
-    </Wrapper>
+    </Row>
   );
 };
 

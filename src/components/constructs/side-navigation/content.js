@@ -19,15 +19,15 @@ export const menuItems = [
   },
   {
     name: "Stillevens",
-    path: PATHNAMES.STILLEVENS,
+    path: PATHNAMES.STILLEVEN,
   },
   {
     name: "Zwart-Wit",
-    path: PATHNAMES.ZWART_WIT,
+    path: PATHNAMES.ZWARTWIT,
   },
   {
     name: "Uitvaart",
-    path: PATHNAMES.BEGRAFENIS,
+    path: PATHNAMES.UITVAART,
   },
   {
     name: "Contact",

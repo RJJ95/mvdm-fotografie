@@ -8,7 +8,6 @@ import { PATHNAMES } from "../../../config/pathnames";
 import SideNavigation from "../side-navigation";
 import MenuItem from "../../primitives/menu-item";
 import Footer from "../../constructs/footer";
-import Row from "../../primitives/row";
 
 // Styles
 const Wrapper = styled.div`
