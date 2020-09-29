@@ -39,7 +39,7 @@ const Modal = ({ isOpen, closeModal, children }) => {
       closeTimeoutMS={200}
       style={style}
       isOpen={isOpen}
-      onRequestClose={() => closeModal()}
+      onRequestClose={closeModal}
     >
       {children}
     </ReactModal>
