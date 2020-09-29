@@ -5,3 +5,9 @@ export const Paragraph = styled.p`
   margin-top: 0;
   margin-right: 20px;
 `;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+`;

@@ -9,20 +9,22 @@ import Column from "../../components/primitives/column";
 import Image from "../../components/primitives/image";
 
 // Styles
-import { Paragraph } from "./contact-styles";
+import { Paragraph, Link } from "./contact-styles";
 
 const Contact = () => (
   <Row>
     <Column>
       <Paragraph>
-        Indien u met mij wilt samenwerken, kan ik u verzekeren dat ik altijd
-        goed voorbereid. U kunt er van op aan dat u de fot een afzienbare
-        termijn ontvangt. Deze website is een impressie van mijn werk, maar ik
-        sta open voor andere thema’s of vragen over fotografie.
+        Indien u interesse hebt om met mij samen te werken ga ik eerst een
+        persoonlijk gesprek met u aan om uw wensen in kaart te brengen. Ik
+        bereid me altijd goed voor op een opdracht. U kunt ervan op aan dat u de
+        foto's binnen afzienbare tijd ontvangt. Deze website is een impressie
+        van mijn werk, maar ik sta open voor andere opdrachten/thema's.
       </Paragraph>
       <Paragraph>
-        Neem contact met mij op per mail en dan kunnen we afspreken voor een bak
-        koffie.
+        Neem voor vragen contact met mij op per{" "}
+        <Link href="mailto:marcvandermaas68@gmail.com">mail</Link> en indien u
+        wilt kunnen we elkaar ontmoeten onder het genot van een bakje koffie.
       </Paragraph>
     </Column>
     <Column>
