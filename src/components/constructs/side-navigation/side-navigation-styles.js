@@ -6,18 +6,32 @@ import { ReactComponent as Facebook } from "../../../assets/icons/facebook.svg";
 import Column from "../../primitives/column";
 
 export const InstagramIcon = styled(Instagram)`
-  fill: grey;
   cursor: pointer;
   width: 18px;
   height: 18px;
   margin-right: 10px;
+  path {
+    fill: grey !important;
+  }
+  :hover {
+    path {
+      fill: black !important;
+    }
+  }
 `;
 
 export const FacebookIcon = styled(Facebook)`
-  fill: grey;
   cursor: pointer;
   width: 18px;
   height: 18px;
+  path {
+    fill: grey !important;
+  }
+  :hover {
+    path {
+      fill: black !important;
+    }
+  }
 `;
 
 export const Wrapper = styled(Column)`
