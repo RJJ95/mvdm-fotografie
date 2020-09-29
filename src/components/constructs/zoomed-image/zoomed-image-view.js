@@ -1,12 +1,16 @@
 import React from "react";
 
 import Modal from "../../primitives/modal";
+import Image from "../../primitives/image";
 
-import { Image } from "./zoomed-image-style";
+import { ImageContainer, CloseIcon } from "./zoomed-image-styles";
 
 const ZoomedImage = ({ image, cancelZoom }) => (
   <Modal closeModal={cancelZoom} isOpen={image}>
-    <Image effect="blur" src={image} onClick={cancelZoom} />
+    <ImageContainer>
+      <Image effect="blur" src={image} />
+      <CloseIcon onClick={cancelZoom} />
+    </ImageContainer>
   </Modal>
 );
 

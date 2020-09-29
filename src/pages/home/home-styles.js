@@ -1,17 +1,18 @@
 import styled from "styled-components";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import Row from "../../components/primitives/row";
 import Column from "../../components/primitives/column";
 
-export const HeroImage = styled(LazyLoadImage)`
-  max-width: 100%;
-  height: auto;
-`;
+import { breakpoints } from "../../config/break-points";
 
 export const ParagraphRow = styled(Row)`
   padding: 10px 20px;
   justify-content: space-between;
+  ${breakpoints("flex-direction", "", [
+    { 425: "column" },
+    { 375: "column" },
+    { 320: "column" },
+  ])};
 `;
 
 export const Wrapper = styled(Column)`

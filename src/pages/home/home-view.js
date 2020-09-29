@@ -5,13 +5,14 @@ import heroImage from "../../assets/images/hero-image.jpg";
 
 // Components
 import Column from "../../components/primitives/column";
+import Image from "../../components/primitives/image";
 
 // Styles
-import { Wrapper, HeroImage, Paragraph, ParagraphRow } from "./home-styles";
+import { Wrapper, Paragraph, ParagraphRow } from "./home-styles";
 
 const Home = () => (
   <Wrapper>
-    <HeroImage alt="hero-image" src={heroImage} effect="blur" />
+    <Image alt="hero-image" src={heroImage} effect="blur" />
     <ParagraphRow>
       <Column>
         <Paragraph>

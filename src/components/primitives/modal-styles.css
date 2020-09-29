@@ -10,3 +10,10 @@
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
+
+.ReactModal__Content {
+  top: 50px !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}

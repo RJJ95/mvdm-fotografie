@@ -5,6 +5,8 @@ import { ReactComponent as Facebook } from "../../../assets/icons/facebook.svg";
 
 import Column from "../../primitives/column";
 
+import { breakpoints } from "../../../config/break-points";
+
 export const InstagramIcon = styled(Instagram)`
   cursor: pointer;
   width: 18px;
@@ -41,9 +43,6 @@ export const Wrapper = styled(Column)`
   display: flex;
   flex-direction: column;
   padding-right: 20px;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 800px;
 `;
 
 export const Notification = styled.div`
@@ -52,4 +51,9 @@ export const Notification = styled.div`
   color: grey;
   font-weight: 600;
   padding-right: 20px;
+  ${breakpoints("margin", "", [
+    { 425: "30px auto" },
+    { 375: "30px auto" },
+    { 320: "30px auto" },
+  ])};
 `;
