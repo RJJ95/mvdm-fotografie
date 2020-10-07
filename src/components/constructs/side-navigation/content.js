@@ -30,6 +30,10 @@ export const menuItems = [
     path: PATHNAMES.UITVAART,
   },
   {
+    name: "Over mij",
+    path: PATHNAMES.HOME,
+  },
+  {
     name: "Contact",
     path: PATHNAMES.CONTACT,
   },

@@ -8,7 +8,7 @@ import { ImageContainer, CloseIcon } from "./zoomed-image-styles";
 const ZoomedImage = ({ image, cancelZoom }) => (
   <Modal closeModal={cancelZoom} isOpen={image}>
     <ImageContainer>
-      <Image effect="blur" src={image} />
+      <Image threshold={100} effect="blur" src={image} />
       <CloseIcon onClick={cancelZoom} />
     </ImageContainer>
   </Modal>
