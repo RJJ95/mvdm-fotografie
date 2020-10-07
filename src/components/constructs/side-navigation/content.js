@@ -2,6 +2,10 @@ import { PATHNAMES } from "../../../config/pathnames";
 
 export const menuItems = [
   {
+    name: "Over mij",
+    path: PATHNAMES.HOME,
+  },
+  {
     name: "Concert",
     path: PATHNAMES.CONCERT,
   },
@@ -28,10 +32,6 @@ export const menuItems = [
   {
     name: "Uitvaart",
     path: PATHNAMES.UITVAART,
-  },
-  {
-    name: "Over mij",
-    path: PATHNAMES.HOME,
   },
   {
     name: "Contact",
