@@ -22,10 +22,11 @@ const Contact = () => (
         van mijn werk, maar ik sta open voor andere opdrachten/thema's.
       </Paragraph>
       <Paragraph>
-        Neem voor vragen contact met mij op per{" "}
-        <Link href="mailto:marcvandermaas68@gmail.com">mail</Link> en indien u
+        Neem voor vragen contact met mij op per mail of telefoon en indien u
         wilt kunnen we elkaar ontmoeten onder het genot van een bakje koffie.
       </Paragraph>
+      <Paragraph>Mail: marc@mvdmfotografie.nl</Paragraph>
+      <Paragraph>Telefoon: +31 6 5240 6337</Paragraph>
     </Column>
     <Column>
       <Image effect="blur" src={image} />

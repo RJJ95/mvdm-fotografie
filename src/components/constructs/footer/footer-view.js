@@ -8,15 +8,9 @@ const FooterText = styled.p`
   text-align: center;
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: black;
-`;
-
 const Footer = () => (
   <FooterText>
-    Neem voor interesse of vragen contact per
-    {<Link href="mailto:marcvandermaas68@gmail.com"> mail</Link>} op
+    mail: marc@mvdmfotografie.nl - tel: +31 6 5240 6337
   </FooterText>
 );
 
