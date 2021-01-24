@@ -15,9 +15,9 @@ import {
   Notification,
 } from "./side-navigation-styles";
 
-const SideNavigation = ({ isActive, notification }) => {
+const SideNavigation = ({ isActive, notification, showMenu }) => {
   return (
-    <Wrapper>
+    <Wrapper showMenu={showMenu}>
       {menuItems.map((item, i) => (
         <MenuItem key={i} to={item.path} active={isActive(item.path)}>
           {item.name}

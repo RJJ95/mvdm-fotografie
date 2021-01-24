@@ -3,6 +3,10 @@ import styled from "styled-components";
 // Components
 import Column from "../../components/primitives/column";
 import Image from "../../components/primitives/image";
+import Row from "../../components/primitives/row";
+
+// config
+import { breakpoints } from "../../config/break-points";
 
 export const PortfolioImage = styled(Image)`
   cursor: pointer;
@@ -12,6 +16,14 @@ export const PortfolioImage = styled(Image)`
   :hover {
     opacity: 0.5;
   }
+`;
+
+export const Wrapper = styled(Row)`
+  ${breakpoints("flex-direction", "", [
+    { 425: "column" },
+    { 375: "column" },
+    { 320: "column" },
+  ])};
 `;
 
 export const ImageColumn = styled(Column)`

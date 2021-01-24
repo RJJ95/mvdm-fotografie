@@ -40,9 +40,10 @@ export const Wrapper = styled(Column)`
   flex-basis: 15%;
   flex-shrink: 0;
   flex-grow: 0;
-  display: flex;
   flex-direction: column;
   padding-right: 20px;
+  display: ${({ showMenu }) => (showMenu ? "flex" : "none")};
+  transition: all 500ms ease;
 `;
 
 export const Notification = styled.div`

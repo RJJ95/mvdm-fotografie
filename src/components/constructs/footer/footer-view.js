@@ -10,7 +10,7 @@ const FooterText = styled.p`
 
 const Footer = () => (
   <FooterText>
-    mail: marc@mvdmfotografie.nl - tel: +31 6 5240 6337
+    mail: marc@mvdmfotografie.nl <br /> tel: +31 6 5240 6337
   </FooterText>
 );
 

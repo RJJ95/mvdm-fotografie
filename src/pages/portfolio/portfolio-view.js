@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import ZoomedImage from "../../components/constructs/zoomed-image";
-import Row from "../../components/primitives/row";
 
+// Content
 import {
   concert,
   natuur,
@@ -14,16 +14,24 @@ import {
   zwartwit,
 } from "./content";
 
+// Tools
+import { scrollToTop } from "../../tools/scrollToTop";
+
 // Styles
 import {
   ImageColumn,
   ImageContainer,
   PortfolioImage,
   Overlay,
+  Wrapper,
 } from "./portfolio-styles";
 
 const Portfolio = ({ category }) => {
   const [zoomedImage, setZoomedImage] = useState(null);
+
+  useEffect(() => {
+    scrollToTop()
+  })
 
   function getContentArray() {
     switch (category) {
@@ -47,7 +55,7 @@ const Portfolio = ({ category }) => {
   }
 
   return (
-    <Row>
+    <Wrapper>
       {zoomedImage && (
         <ZoomedImage
           image={zoomedImage}
@@ -68,7 +76,7 @@ const Portfolio = ({ category }) => {
           ))}
         </ImageColumn>
       ))}
-    </Row>
+    </Wrapper>
   );
 };
 

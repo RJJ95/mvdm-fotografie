@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Config
 import { PATHNAMES } from "../../../config/pathnames";
@@ -6,6 +6,7 @@ import { PATHNAMES } from "../../../config/pathnames";
 // Components
 import SideNavigation from "../side-navigation";
 import Footer from "../../constructs/footer";
+import MobileNavigation from "../../constructs/mobile-navigation";
 
 // Styles
 import {
@@ -17,8 +18,21 @@ import {
 } from "./layout-styles";
 
 const Layout = ({ children, location }) => {
+  const [showMenu, setShowMenu] = useState(isMobile() ? false : true);
   function isActive(path) {
     return location.pathname === path ? "true" : "false";
+  }
+
+  function isMobile() {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   function getNotification() {
@@ -40,7 +54,15 @@ const Layout = ({ children, location }) => {
         </Header>
       </HeaderContainer>
       <BodyContainer>
-        <SideNavigation notification={getNotification()} isActive={isActive} />
+        <SideNavigation
+          isMobile={isMobile()}
+          notification={getNotification()}
+          isActive={isActive}
+          showMenu={showMenu}
+        />
+        {isMobile() && (
+          <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} />
+        )}
         {children}
       </BodyContainer>
       <FooterContainer>
