@@ -6,6 +6,12 @@ export const Paragraph = styled.p`
   max-width: 450px;
   margin-top: 0;
   margin-right: 20px;
+
+  ${breakpoints("margin-top", "", [
+    { 425: "1vh" },
+    { 375: "1vh" },
+    { 320: "1vh" },
+  ])};
 `;
 
 export const Link = styled.a`

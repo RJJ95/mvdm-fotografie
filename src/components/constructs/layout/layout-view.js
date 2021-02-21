@@ -17,22 +17,13 @@ import {
   FooterContainer,
 } from "./layout-styles";
 
+// Tools
+import { detectMobile } from "../../../tools/detectMobile";
+
 const Layout = ({ children, location }) => {
-  const [showMenu, setShowMenu] = useState(isMobile() ? false : true);
+  const [showMenu, setShowMenu] = useState(detectMobile() ? false : true);
   function isActive(path) {
     return location.pathname === path ? "true" : "false";
-  }
-
-  function isMobile() {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
-      return true;
-    } else {
-      return false;
-    }
   }
 
   function getNotification() {
@@ -55,12 +46,13 @@ const Layout = ({ children, location }) => {
       </HeaderContainer>
       <BodyContainer>
         <SideNavigation
-          isMobile={isMobile()}
+          isMobile={detectMobile()}
           notification={getNotification()}
           isActive={isActive}
           showMenu={showMenu}
+          setShowMenu={setShowMenu}
         />
-        {isMobile() && (
+        {detectMobile() && (
           <MobileNavigation showMenu={showMenu} setShowMenu={setShowMenu} />
         )}
         {children}

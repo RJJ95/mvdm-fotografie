@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 // Components
-import ZoomedImage from "../../components/constructs/zoomed-image";
+import Image from "../../components/primitives/image";
 
 // Content
 import {
@@ -21,17 +21,14 @@ import { scrollToTop } from "../../tools/scrollToTop";
 import {
   ImageColumn,
   ImageContainer,
-  PortfolioImage,
-  Overlay,
   Wrapper,
 } from "./portfolio-styles";
 
 const Portfolio = ({ category }) => {
-  const [zoomedImage, setZoomedImage] = useState(null);
 
   useEffect(() => {
-    scrollToTop()
-  })
+    scrollToTop();
+  });
 
   function getContentArray() {
     switch (category) {
@@ -56,22 +53,11 @@ const Portfolio = ({ category }) => {
 
   return (
     <Wrapper>
-      {zoomedImage && (
-        <ZoomedImage
-          image={zoomedImage}
-          cancelZoom={() => setZoomedImage(null)}
-        />
-      )}
       {getContentArray().map((photos, i) => (
         <ImageColumn key={i}>
           {photos.map((photo, i) => (
             <ImageContainer key={i}>
-              <PortfolioImage
-                effect="blur"
-                src={photo}
-                onClick={() => setZoomedImage(photo)}
-              />
-              <Overlay onClick={() => setZoomedImage(photo)} />
+              <Image effect="blur" src={photo} />
             </ImageContainer>
           ))}
         </ImageColumn>

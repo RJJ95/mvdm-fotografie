@@ -15,11 +15,19 @@ import {
   Notification,
 } from "./side-navigation-styles";
 
-const SideNavigation = ({ isActive, notification, showMenu }) => {
+// Tools
+import { detectMobile } from "../../../tools/detectMobile";
+
+const SideNavigation = ({ isActive, notification, showMenu, setShowMenu }) => {
   return (
     <Wrapper showMenu={showMenu}>
       {menuItems.map((item, i) => (
-        <MenuItem key={i} to={item.path} active={isActive(item.path)}>
+        <MenuItem
+          onClick={() => detectMobile() && setShowMenu(false)}
+          key={i}
+          to={item.path}
+          active={isActive(item.path)}
+        >
           {item.name}
         </MenuItem>
       ))}
@@ -39,7 +47,7 @@ const SideNavigation = ({ isActive, notification, showMenu }) => {
           <FacebookIcon />
         </a>
       </Row>
-      <Notification>{notification}</Notification>
+      {notification && <Notification>{notification}</Notification>}
     </Wrapper>
   );
 };

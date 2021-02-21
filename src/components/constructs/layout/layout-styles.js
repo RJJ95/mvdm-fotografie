@@ -17,6 +17,11 @@ export const Header = styled(MenuItem)`
 
 export const HeaderContainer = styled.div`
   padding: 50px 0;
+  ${breakpoints("padding", "", [
+    { 425: "50px 0 25px" },
+    { 375: "50px 0 25px" },
+    { 320: "50px 0 25px" },
+  ])};
 `;
 
 export const BodyContainer = styled(Row)`
@@ -34,4 +39,10 @@ export const FooterContainer = styled.div`
   justify-content: center;
   padding-top: 50px;
   padding-bottom: 10px;
+
+  ${breakpoints("padding-top", "", [
+    { 425: "10px" },
+    { 375: "10px" },
+    { 320: "10px" },
+  ])};
 `;

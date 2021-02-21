@@ -44,17 +44,17 @@ export const Wrapper = styled(Column)`
   padding-right: 20px;
   display: ${({ showMenu }) => (showMenu ? "flex" : "none")};
   transition: all 500ms ease;
+  ${breakpoints("padding-bottom", "", [
+    { 425: "25px" },
+    { 375: "25px" },
+    { 320: "25px" },
+  ])};
 `;
 
 export const Notification = styled.div`
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: 25px;
   color: grey;
   font-weight: 600;
   padding-right: 20px;
-  ${breakpoints("margin", "", [
-    { 425: "30px auto" },
-    { 375: "30px auto" },
-    { 320: "30px auto" },
-  ])};
 `;
